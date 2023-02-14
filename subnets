@@ -1,0 +1,10 @@
+import ipaddress
+  
+def get_ip_from_subnet(ip_subnet):
+
+    ips= ipaddress.ip_network(ip_subnet)
+    ip_list=[str(ip) for ip in ips]
+    return ip_list
+
+ip_subnet= input("Enter ip/subnet: ")
+print(get_ip_from_subnet(ip_subnet))
